@@ -5,8 +5,8 @@ import '../App.css';
 const Navbar = () => {
     return (
 
-        <div className='navbar'>
-        <Link> <h1>LAB - WikiCountries </h1></Link>
+        <div>
+        <Link to='/'> <h2  className='navbar'>LAB - WikiCountries </h2></Link>
         </div>
     )
 }

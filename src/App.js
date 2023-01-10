@@ -7,20 +7,16 @@ import CountryDetails from './components/CountryDetails';
 function App() {
   return (
     <div className="App">  
-    {/* <Navbar/> */}
+      <Navbar/>
+      <div className='countryAndSelect'>
+        <CountrieList className='NavBar'/>
     
- 
-    <Routes>
-    
-      <Route path='/nav' element={<Navbar />}/>
-      <Route path='/' element={<CountrieList />}/>
-      <Route path='/countrie-list/country-details' element={<CountryDetails />}/>
-      <Route path='/:idCountry' element={<CountryDetails/>}/>
+        <Routes>
+        
+          <Route path='/:idCountry' element={<CountryDetails/>}/>
 
-
-
-
-    </Routes>
+        </Routes>
+      </div>
     </div>
   );
 }
