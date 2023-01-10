@@ -3,25 +3,32 @@ import data from '../countries.json'
 import { useState, useEffect } from "react"
 import ListGroup from 'react-bootstrap/ListGroup';
 import { useParams } from "react-router-dom";
+import axios from 'axios'
 
 
 
 const CountrieList = () => {
 
-    const [dataCountry, setDataCountry] = useState(data)
+    const [loading, setLoading] = useState(false)
+    const [dataCountry, setDataCountry] = useState([])
     
     useEffect( () => {
-            // console.log(dataCountry)
-    }, []
+        fetchData()
+        setLoading(true)
+        // console.log(loading)
+            }, []
     )
 
 
 
- 
-   
+    const fetchData =() =>{
+        axios.get('https://ih-countries-api.herokuapp.com/countries')
+        .then((response => setDataCountry(response.data))
+        )
 
+    }
     
-
+    
 
     return (
         

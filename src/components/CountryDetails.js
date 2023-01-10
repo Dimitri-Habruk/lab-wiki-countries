@@ -16,7 +16,7 @@ const CountryDetails = () => {
        }
     const selectedСountry = matchAlpha3Code()
      
-    console.log(selectedСountry.borders        )
+    // console.log(selectedСountry.borders        )
 
 
     return (
